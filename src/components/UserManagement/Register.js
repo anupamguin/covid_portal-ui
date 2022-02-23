@@ -2,15 +2,17 @@ import React, { Component } from "react";
 import "./css/animate.css";
 import "./css/Register.css";
 import { Animated } from "react-animated-css";
+import {do_register} from '../Actions/UserActions'
+import { connect } from "react-redux";
 
 class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
       name: "",
-      mobile: "",
       email: "",
       mobile: "",
+      age: 0,
       password: "",
       confirmPassword: "",
     };
@@ -21,16 +23,21 @@ class Register extends Component {
   };
 
   Click = () => {
-    console.log(
-      this.state.name +
-        "  " +
-        this.state.mobile +
-        "  " +
-        this.state.email +
-        "  " +
-        this.state.age
-    );
+    const regData={
+      name:this.state.name,
+      email:this.state.email,
+      mobile:this.state.mobile,
+      age:this.state.age,
+      password:this.state.password,
+      confirmPassword:this.state.confirmPassword
+    }
+    this.props.do_register(regData);
   };
+
+  componentWillReceiveProps(props){
+    console.log('prpps',props);
+  }
+
   render() {
     return (
       <div className="allbodys">
@@ -75,7 +82,7 @@ class Register extends Component {
               <AnimatedInput
                 animationIn="bounceInRight"
                 animationOut="fadeOut"
-                type="text"
+                type="number"
                 name="age"
                 label="Age"
                 onChange={this.onChange}
@@ -117,7 +124,17 @@ class Register extends Component {
     );
   }
 }
-export default Register;
+
+const mapStateToProps = state =>({
+  registerResponse: state.userReducer.registerResponse ? 
+  state.userReducer.registerResponse : {}
+})
+
+const mapDispatchToProps ={
+  do_register
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Register);
 
 export const AnimatedInput = (props) => {
   return (
