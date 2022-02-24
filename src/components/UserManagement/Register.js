@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React, { Component,Suspense } from "react";
 import "./css/animate.css";
 import "./css/Register.css";
 import { Animated } from "react-animated-css";
 import {do_register} from '../Actions/UserActions'
 import { connect } from "react-redux";
+import Spinner from '../GenericsComponent/Spinner'
 
 class Register extends Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class Register extends Component {
       age: 0,
       password: "",
       confirmPassword: "",
+      suspensePage: false,
     };
   }
 
@@ -31,6 +33,7 @@ class Register extends Component {
       password:this.state.password,
       confirmPassword:this.state.confirmPassword
     }
+    this.setState({suspensePage:true})
     this.props.do_register(regData);
   };
 
@@ -41,6 +44,7 @@ class Register extends Component {
   render() {
     return (
       <div className="allbodys">
+      {this.state.suspensePage && <Spinner/>}
         <footer className="conFoot">
           <div className="container">
             <Animated

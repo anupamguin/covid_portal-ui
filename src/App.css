@@ -293,3 +293,10 @@ font-weight: 600;
 }
 
 /* userhide 970 */
+.spinners{
+      z-index: 99999 !important;
+      position: absolute !important;
+      top: 50vh !important;
+      left: 41vw !important;
+      transform: translate(-50%,-50%) !important;
+}

@@ -5,9 +5,13 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Login from "./components/UserManagement/Login";
 import Register from "./components/UserManagement/Register";
 import Otp from "./components/UserManagement/Otp";
+import Spinner from './components/GenericsComponent/Spinner';
+import React, { Suspense } from "react";
+
 function App() {
   return (
-    <>
+    <React.Fragment>
+     <Suspense fallback={<Spinner/>}>
       <BrowserRouter>
         <Header />
         <div className="landing">
@@ -18,7 +22,8 @@ function App() {
           {/* <Switch></Switch> */}
         </div>
       </BrowserRouter>
-    </>
+      </Suspense>
+      </React.Fragment>
   );
 }
 
