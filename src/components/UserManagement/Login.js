@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { do_login } from "../Actions/UserActions";
 import "./css/Login.css";
 
 class Login extends Component {
@@ -21,6 +23,7 @@ class Login extends Component {
     };
     this.setState({ username: "", password: "" });
     console.log(loginData);
+    this.props.do_login(loginData);
   };
 
   render() {
@@ -73,4 +76,11 @@ class Login extends Component {
     );
   }
 }
-export default Login;
+
+const mapStateToProps = (state) => ({});
+
+const mapDispatchToProps = {
+  do_login,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

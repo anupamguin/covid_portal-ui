@@ -1,17 +1,19 @@
 import "./App.css";
+// import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.css";
 import Header from "./components/Layout/Header";
 import Home from "./components/Layout/Home";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Login from "./components/UserManagement/Login";
 import Register from "./components/UserManagement/Register";
 import Otp from "./components/UserManagement/Otp";
-import Spinner from './components/GenericsComponent/Spinner';
-import React, { Suspense } from "react";
+import React from "react";
+import GlobalAlertModal from "./components/GlobalAlertModal/globalAlertModal";
 
 function App() {
   return (
     <React.Fragment>
-     <Suspense fallback={<Spinner/>}>
+      <GlobalAlertModal />
       <BrowserRouter>
         <Header />
         <div className="landing">
@@ -22,8 +24,7 @@ function App() {
           {/* <Switch></Switch> */}
         </div>
       </BrowserRouter>
-      </Suspense>
-      </React.Fragment>
+    </React.Fragment>
   );
 }
 

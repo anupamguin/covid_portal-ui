@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { otpSubmit } from "../Actions/UserActions";
 
-export default class Otp extends Component {
+class Otp extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,11 +11,23 @@ export default class Otp extends Component {
   }
 
   onchng = (e) => {
-    e.target.value.length <= 6 &&
-      this.setState({ [e.target.name]: e.target.value });
+    this.setState({ [e.target.name]: e.target.value });
   };
 
-  SubmitBtn = (e) => {};
+  SubmitBtn = (e) => {
+    console.log(this.props.registerResponse);
+    const otpSubmit = {
+      id: this.props.registerResponse.id,
+      otp: this.state.otp,
+    };
+    this.props.otpSubmit(otpSubmit, this.props);
+  };
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.otpSubmitResponse !== nextProps.otpSubmitResponse) {
+      this.props.history.push("/login");
+    }
+  }
 
   render() {
     return (
@@ -24,7 +38,7 @@ export default class Otp extends Component {
           <div className="inputs">
             <label className="onlyLabel one">One Time Password</label>
             <input
-              type="text"
+              type="number"
               placeholder="ENTER OTP"
               className="onlyInput one"
               name="otp"
@@ -40,3 +54,17 @@ export default class Otp extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  registerResponse: state.userReducer.registerResponse
+    ? state.userReducer.registerResponse
+    : {},
+  otpSubmitResponse: state.userReducer.otpSubmitResponse
+    ? state.userReducer.otpSubmitResponse
+    : {},
+});
+
+const mapDispatchToProps = {
+  otpSubmit,
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Otp);
