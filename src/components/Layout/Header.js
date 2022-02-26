@@ -108,7 +108,7 @@ class Header extends Component {
           </div>
         </li>
         <li>
-          <Link to="/map">About Us</Link>
+          <Link to="/">About Us</Link>
         </li>
         <li>
           <a href="#">Contact</a>
