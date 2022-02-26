@@ -17,7 +17,7 @@ class Header extends Component {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#">Other Centre</a>
+          <Link to="/covidMap">Other Centre</Link>
         </li>
         <li>
           <a href="#" className="desktop-item">
@@ -108,7 +108,7 @@ class Header extends Component {
           </div>
         </li>
         <li>
-          <a href="#">About Us</a>
+          <Link to="/map">About Us</Link>
         </li>
         <li>
           <a href="#">Contact</a>
