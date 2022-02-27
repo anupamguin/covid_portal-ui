@@ -1,6 +1,7 @@
 import "./App.css";
 // import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap";
 import Header from "./components/Layout/Header";
 import Home from "./components/Layout/Home";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -12,6 +13,8 @@ import GlobalAlertModal from "./components/GlobalAlertModal/globalAlertModal";
 import CovidMap from "./components/Layout/CovidMap";
 import CovidData from "./components/Layout/CovidData";
 import CovidWorldCase from "./components/Layout/CovidWorldCase";
+import Contact from "./components/Layout/Contact";
+import Graph from "./components/Layout/Graph";
 
 function App() {
   return (
@@ -27,6 +30,8 @@ function App() {
           <Route exact path="/covid-map" component={CovidMap} />
           <Route exact path="/covid-data" component={CovidData} />
           <Route exact path="/covid-world-case" component={CovidWorldCase} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/graph" component={Graph} />
           {/* <Switch></Switch> */}
         </div>
       </BrowserRouter>

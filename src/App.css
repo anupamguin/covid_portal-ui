@@ -537,3 +537,18 @@ font-weight: 600;
 .third-card .box:hover .content {
   top: 0;
 }
+
+.a-tag {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid blue;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.a-tag:hover {
+  background: black;
+  color: white;
+  text-decoration: none;
+  border: none;
+}

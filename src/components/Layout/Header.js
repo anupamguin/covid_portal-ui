@@ -17,7 +17,7 @@ class Header extends Component {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/covid-map">Other Centre</Link>
+          <Link to="/covid-map">Map Data</Link>
         </li>
         <li>
           <a href="#" className="desktop-item">
@@ -35,14 +35,14 @@ class Header extends Component {
               <Link to="/covid-world-case">Worldwide Case</Link>
             </li>
             <li>
-              <a href="#">Diseases control</a>
+              <Link to="/graph">Graph Data</Link>
             </li>
             <li>
               <a href="#">Drop menu 4</a>
             </li>
           </ul>
         </li>
-        <li>
+        {/* <li>
           <a href="#" className="desktop-item">
             Prevention &#9759;
           </a>
@@ -52,7 +52,7 @@ class Header extends Component {
           </label>
           <div className="mega-box">
             <div className="content">
-              <div className="row">{/* <img src="img.jpg" alt=""> */}</div>
+              <div className="row"></div>
               <div className="row">
                 <header>Design Services</header>
                 <ul className="mega-links">
@@ -106,12 +106,12 @@ class Header extends Component {
               </div>
             </div>
           </div>
-        </li>
+        </li> */}
         <li>
           <Link to="/">About Us</Link>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
         <li className="userhide">
           <a href="#" className="desktop-item">

@@ -107,6 +107,27 @@ axios.interceptors.response.use(
             message: `Please give the right Username & Password`,
           },
         });
+      } else if (409 === error.response.status) {
+        let endpoint = error.response.config.url.split("/")[3];
+        console.log(error.response.data, "eee");
+        const er = error.response.data;
+        let errMsg = "";
+        if (er.name) {
+          errMsg += er.name;
+        }
+        if (er.email) {
+          errMsg += " " + er.email;
+        }
+        // console.log(endpoint, "    ", error.response.config.url);
+        store.dispatch({
+          type: SET_GLOBAL_ALERT_MODAL,
+          payload: {
+            show: true,
+            type: "info",
+            title: `Fill the Form Correctly`,
+            message: `${errMsg}`,
+          },
+        });
       } else return Promise.reject(error);
     } catch (err) {
       console.log("error came in index.js");
