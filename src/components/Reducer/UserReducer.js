@@ -4,6 +4,7 @@ import {
   OTP_SUBMIT_SAGA,
   REGISTER_SAGA,
   SET_CURRENT_USER,
+  RESET,
 } from "../Constants/UserConstants";
 
 let defaultState = {
@@ -45,6 +46,8 @@ export default function userReducer(state = defaultState, action) {
           validToken: booleanActionPayload(action.payload),
         },
       };
+    case RESET:
+      return defaultState;
     default:
       return state;
   }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { logout } from "../Api/UserApi";
-import { setCurrentUser } from "../Actions/UserActions";
+import { setCurrentUser, resetReducer } from "../Actions/UserActions";
 
 class Header extends Component {
   logout = () => {
@@ -36,9 +36,6 @@ class Header extends Component {
             </li>
             <li>
               <Link to="/graph">Graph Data</Link>
-            </li>
-            <li>
-              <a href="#">Drop menu 4</a>
             </li>
           </ul>
         </li>
@@ -108,7 +105,7 @@ class Header extends Component {
           </div>
         </li> */}
         <li>
-          <Link to="/">About Us</Link>
+          <Link to="/about">About Me</Link>
         </li>
         <li>
           <Link to="/contact">Contact</Link>
@@ -192,5 +189,6 @@ const mapStateToProps = (state) => ({
 });
 const mapDispatchToProps = {
   setCurrentUser,
+  resetReducer,
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

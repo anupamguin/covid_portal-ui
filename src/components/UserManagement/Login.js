@@ -26,6 +26,11 @@ class Login extends Component {
     this.props.do_login(loginData);
   };
 
+  componentWillReceiveProps(nextProps) {
+    console.warn(nextProps, "next Props");
+    if (nextProps.userReducer.loginResponse.success)
+      this.props.history.push("/");
+  }
   render() {
     return (
       <div className="allbody">
@@ -77,7 +82,9 @@ class Login extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({
+  userReducer: state.userReducer,
+});
 
 const mapDispatchToProps = {
   do_login,

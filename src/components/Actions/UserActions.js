@@ -7,6 +7,7 @@ import {
   OTP_SUBMIT,
   OTP_SUBMIT_SAGA,
   SET_CURRENT_USER,
+  RESET,
 } from "../Constants/UserConstants";
 
 export const do_login = (data) => ({
@@ -49,4 +50,8 @@ export const otp_SubmitSaga = (data) => ({
 export const setCurrentUser = (data) => ({
   type: SET_CURRENT_USER,
   payload: data,
+});
+
+export const resetReducer = () => ({
+  type: RESET,
 });

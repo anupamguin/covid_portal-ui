@@ -49,6 +49,9 @@ class Otp extends Component {
           <button className="button-73" role="button" onClick={this.SubmitBtn}>
             Submit
           </button>
+          <br />
+          <br />
+          <p className="text-danger">Check your E-Mail</p>
         </div>
       </div>
     );

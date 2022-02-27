@@ -2,7 +2,7 @@ import axios from "axios";
 import { BASE_URL } from "../Constants/PathConstants";
 import jwt_decode from "jwt-decode";
 import setJWTToken from "../security/setJWTToken";
-import { SET_CURRENT_USER } from "../Constants/UserConstants";
+import { RESET, SET_CURRENT_USER } from "../Constants/UserConstants";
 
 export const loginApi = async (d) => {
   let res = await axios.post(`${BASE_URL}/user/login`, d);
@@ -53,7 +53,7 @@ export const logout = (props) => {
   console.log("came toooo");
   localStorage.removeItem("jwtToken");
   setJWTToken(false);
-  props.setCurrentUser({});
+  props.resetReducer();
   // dispatch({
   //   type: SET_CURRENT_USER,
   //   payload: {},
