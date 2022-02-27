@@ -127,7 +127,6 @@ class Home extends Component {
                     <div className="col-8">
                       <p
                         style={{
-                          color: "#e74292",
                           fontSize: "1rem",
                           fontFamily: "Times New Roman', Times, serif",
                         }}
@@ -158,7 +157,7 @@ class Home extends Component {
                     <div className="col-8">
                       <p
                         style={{
-                          color: "#e74292",
+                          color: "blue",
                           fontSize: "1rem",
                           fontFamily: "Times New Roman', Times, serif",
                         }}
