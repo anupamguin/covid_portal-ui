@@ -14,6 +14,7 @@ class CovidMap extends Component {
     countriesLocation = nextProps.mapCountriesReducer.map((data, i) => {
       return (
         <div
+          key={Math.random()}
           lat={data.countryInfo.lat}
           lng={data.countryInfo.long}
           style={{

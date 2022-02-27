@@ -17,7 +17,7 @@ class Header extends Component {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/covidMap">Other Centre</Link>
+          <Link to="/covid-map">Other Centre</Link>
         </li>
         <li>
           <a href="#" className="desktop-item">
@@ -29,10 +29,10 @@ class Header extends Component {
           </label>
           <ul className="drop-menu">
             <li>
-              <a href="#">Corona Details</a>
+              <Link to="/covid-data">Corona Details</Link>
             </li>
             <li>
-              <a href="#">Worldwide Case</a>
+              <Link to="/covid-world-case">Worldwide Case</Link>
             </li>
             <li>
               <a href="#">Diseases control</a>

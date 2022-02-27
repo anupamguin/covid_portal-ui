@@ -10,6 +10,8 @@ import Otp from "./components/UserManagement/Otp";
 import React from "react";
 import GlobalAlertModal from "./components/GlobalAlertModal/globalAlertModal";
 import CovidMap from "./components/Layout/CovidMap";
+import CovidData from "./components/Layout/CovidData";
+import CovidWorldCase from "./components/Layout/CovidWorldCase";
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/otp" component={Otp} />
-          <Route exact path="/covidMap" component={CovidMap} />
+          <Route exact path="/covid-map" component={CovidMap} />
+          <Route exact path="/covid-data" component={CovidData} />
+          <Route exact path="/covid-world-case" component={CovidWorldCase} />
           {/* <Switch></Switch> */}
         </div>
       </BrowserRouter>
