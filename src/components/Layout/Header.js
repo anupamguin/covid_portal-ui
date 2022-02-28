@@ -118,7 +118,7 @@ class Header extends Component {
           <label htmlFor="showDrop1" className="mobile-item">
             {user.name} &#9759;
           </label>
-          <ul className="drop-menu">
+          <ul className="drop-menu1">
             <li>
               {/* <Link to="/login">Login</Link> */}
               <a onClick={this.logout}>Logout</a>
@@ -132,7 +132,13 @@ class Header extends Component {
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li className="userhide">
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
+        <li>
+          <Link to="/register">Sign Up</Link>
+        </li>
+        {/* <li className="userhide">
           <a href="#" className="desktop-item">
             User &#9759;
           </a>
@@ -148,7 +154,7 @@ class Header extends Component {
               <Link to="/register">Sign Up</Link>
             </li>
           </ul>
-        </li>
+        </li> */}
       </>
     );
 

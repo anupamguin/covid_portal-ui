@@ -32,13 +32,13 @@ class CovidWorldCase extends Component {
     return (
       <>
         <div className="row" style={{ width: "100vw", marginTop: "2rem" }}>
-          <div className="col-4">
+          <div className="col-sm-12 col-md-12 col-lg-4">
             <FirstCard data={covidAll} updateMSG={updateMSG} />
           </div>
-          <div className="col-4">
+          <div className="col-sm-12 col-md-12 col-lg-4">
             <SecondCard data={covidAll} updateMSG={updateMSG} />
           </div>
-          <div className="col-4">
+          <div className="col-sm-12 col-md-12 col-lg-4">
             <ThirdCard data={covidAll} updateMSG={updateMSG} />
           </div>
         </div>

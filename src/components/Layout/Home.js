@@ -15,7 +15,7 @@ class Home extends Component {
         <br /> */}
         <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="col-lg-4 col-sm-12 col-md-12 mb-5">
               <h3 className="text-success ">Symptoms of Coronavirus</h3>
               The most common symptoms of COVID-19 are fever, tiredness, and dry
               cough. Some patients may have aches and pains, nasal congestion,
@@ -24,7 +24,7 @@ class Home extends Component {
               after exposure.
             </div>
 
-            <div className="col-6">
+            <div className="col-lg-8 col-sm-12 col-md-12">
               <ul className="nav nav-tabs" id="myTab" role="tablist">
                 <li className="nav-item" role="presentation">
                   <button
