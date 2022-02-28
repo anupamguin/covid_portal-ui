@@ -203,6 +203,24 @@ nav .wrapper {
   #showMega:checked ~ .mega-box {
     max-height: 100%;
   }
+
+  .nav-links .drop-menu1 {
+    position: static !important;
+    opacity: 1;
+    top: 65px;
+    visibility: visible;
+    padding-left: 20px;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+
+  #showDrop1:checked ~ .drop-menu1,
+  #showMega:checked ~ .mega-box {
+    max-height: 100%;
+  }
   .nav-links .desktop-item {
     display: none;
   }
@@ -223,6 +241,13 @@ nav .wrapper {
     margin: 0;
   }
   .drop-menu li a {
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .drop-menu1 li {
+    margin: 0;
+  }
+  .drop-menu1 li a {
     border-radius: 5px;
     font-size: 18px;
   }
@@ -552,10 +577,6 @@ font-weight: 600;
   text-decoration: none;
   border: none;
 }
-#showDrop1:checked ~ .drop-menu1,
-#showMega:checked ~ .mega-box {
-  max-height: 100%;
-}
 .nav-links li:hover .drop-menu1,
 .nav-links li:hover .mega-box {
   transition: all 0.3s ease;
@@ -580,23 +601,4 @@ font-weight: 600;
   opacity: 0;
   visibility: hidden;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-.drop-menu1 li {
-  margin: 0;
-}
-.drop-menu1 li a {
-  border-radius: 5px;
-  font-size: 18px;
-}
-.nav-links .drop-menu1 {
-  position: static;
-  opacity: 1;
-  top: 65px;
-  visibility: visible;
-  padding-left: 20px;
-  width: 100%;
-  max-height: 0px;
-  overflow: hidden;
-  box-shadow: none;
-  transition: all 0.3s ease;
 }
