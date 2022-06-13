@@ -37,7 +37,7 @@ class CovidData extends Component {
     );
     return (
       <div style={{ textAlign: "center" }} className="cvdData">
-        <h1>Covid Information by Anupam</h1>
+        <h1>Covid Information</h1>
         <SearchBox onSearchChange={this.onSearchChange} />
         <CardList countriesData={filterCountries} />
       </div>

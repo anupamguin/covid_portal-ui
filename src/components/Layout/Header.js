@@ -27,7 +27,7 @@ class Header extends Component {
           <label htmlFor="showDrop" className="mobile-item">
             News Portal &#9759;
           </label>
-          <ul className="drop-menu">
+          <ul className="drop-menu" style={{fontSize:'17px'}}>
             <li>
               <Link to="/covid-data">Corona Details</Link>
             </li>
@@ -36,6 +36,12 @@ class Header extends Component {
             </li>
             <li>
               <Link to="/graph">Graph Data</Link>
+            </li>
+            <li>
+              <Link to="/allWorldData">World Data</Link>
+            </li>
+            <li>
+              <Link to="/maps">MAP</Link>
             </li>
           </ul>
         </li>

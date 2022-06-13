@@ -4,7 +4,7 @@ export const ThirdCard = (props) => (
   <div className="third-card">
     <h2 className="text-success">COVID RECOVERED</h2>
     <div className="box">
-      <img src="images/AnupamPic.png" alt="anupam" />
+      <img src="images/recover.jpg" alt="anupam" />
       <div className="content">
         <h3>Recovered</h3>
         <p>{props.updateMSG}</p>

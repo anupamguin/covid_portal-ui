@@ -16,6 +16,8 @@ import CovidWorldCase from "./components/Layout/CovidWorldCase";
 import Contact from "./components/Layout/Contact";
 import Graph from "./components/Layout/Graph";
 import About from "./components/Layout/About";
+import WorldData from "./components/Layout/CovidWorldCase-Component/WorldData";
+import MapComponent from "./components/Layout/Maps/MapComponent";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/graph" component={Graph} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/allWorldData" component={WorldData} />
+          <Route exact path="/maps" component={MapComponent} />
           {/* <Switch></Switch> */}
         </div>
       </BrowserRouter>
