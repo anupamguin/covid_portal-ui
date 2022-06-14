@@ -606,3 +606,11 @@ font-weight: 600;
   color: black;
   font-size: 14px;
 }
+
+.ourDetails{
+  background-image: url("../public/images/ourteam.jpg");
+  background-position: center center;
+  /* width: 100vw;
+  height: 100vh; */
+  background-size: 80vw 100vh;
+}
