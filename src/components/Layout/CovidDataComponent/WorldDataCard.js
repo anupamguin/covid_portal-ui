@@ -64,7 +64,6 @@ export default class WorldDataCard extends Component {
                     <h2> {i.Province} </h2>
                     <p>Active : {i.Active}</p>
                     <p>Confirmed: {i.Confirmed}</p>
-                    <p>Recovered : {i.Recovered}</p>
                     <p>Date: {i.Date}</p>
                     <p>Latitude: {i.Lat}</p>
                     <p>Longitude :{i.Lon}</p>
