@@ -17,6 +17,7 @@ class About extends Component {
           <div className="col-4">
             <h5 style={{background:'yellow'}}>Sudhansu Sekhar Jena</h5>
             <h5 style={{background:'yellow'}}>Animesh Khan</h5>
+            <h5 style={{background:'yellow'}}>Satya Sagar Mohanta</h5>
             <h5 style={{background:'yellow'}}>Anupam Guin</h5>
           </div>
           <div className="col-8">
@@ -35,9 +36,10 @@ class About extends Component {
           </div>
           <div className="col-4">
           <h5 style={{background:'pink'}}> For other details Please Contact Us : </h5> <br/>
-            <h5 style={{background:'grey'}}>anupamguin7585@gmail.com</h5> <br/>
-            <h5 style={{background:'grey'}}>animeshkhan67@gmail.com</h5> <br/>
-            <h5 style={{background:'grey'}}>sudhansujena191@gmail.com</h5>
+            <h5 style={{background:'white'}}>anupamguin7585@gmail.com</h5> <br/>
+            <h5 style={{background:'white'}}>animeshkhan67@gmail.com</h5> <br/>
+            <h5 style={{background:'white'}}>sudhansujena191@gmail.com</h5> <br/>
+            <h5 style={{background:'white'}}>satyasagar25@gmail.com</h5>
           </div>
         </div>
       </div>
